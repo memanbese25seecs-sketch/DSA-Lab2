@@ -37,7 +37,8 @@ void testNegativeValues() {
 }
 
 
-// ============ IMPLEMENTATION ============
+// Compares each element with the next.
+// Returns false as soon as an out-of-order pair is found.
 bool isSorted(const int* arr, const int size) {
     for (int i = 0; i < size - 1; i++) {
         if (arr[i] > arr[i + 1]) {
