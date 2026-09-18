@@ -46,6 +46,16 @@ bool isSorted(const int* arr, const int size) {
     }
     return true;
 }
+// ============ MY ADDITIONAL TESTS ============
+void testAllEqual() {
+    int arr[] = {4, 4, 4, 4};
+    assert(isSorted(arr, 4) == true);
+}
+
+void testTwoElementsSorted() {
+    int arr[] = {10, 20};
+    assert(isSorted(arr, 2) == true);
+}
 
 // ============ MAIN ============
 int main() {
@@ -55,6 +65,8 @@ int main() {
     testSingleElement();
     testDescendingArray();
     testNegativeValues();
+     testAllEqual();
+    testTwoElementsSorted();
 
     cout << "All tests passed!" << endl;
     return 0;
