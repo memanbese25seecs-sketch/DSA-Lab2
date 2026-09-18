@@ -36,9 +36,15 @@ void testNegativeValues() {
     assert(isSorted(arr, 5) == true);
 }
 
-// ============ STUB (will fail tests) ============
+
+// ============ IMPLEMENTATION ============
 bool isSorted(const int* arr, const int size) {
-    return false;
+    for (int i = 0; i < size - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 // ============ MAIN ============
